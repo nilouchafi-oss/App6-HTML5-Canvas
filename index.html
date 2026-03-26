@@ -59,8 +59,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     function loadImage() {
       var c = document.getElementById("myCanvas");
       var ctx = c.getContext("2d");
+		//Create a new image object
       var img = new Image();
-
+// When the image loads, draw it on the canvas
       img.onload = function() {
         ctx.drawImage(img, 25, 25, 300, 180);
       };
