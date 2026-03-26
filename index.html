@@ -25,148 +25,122 @@ https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 	
-   <head> 
-      <title>App6---HTML5-Canvas</title>  
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <link rel="stylesheet" href="w3.css">
-      <link rel="stylesheet" href="w3-colors-flat.css">
-   </head> 
+<head>
+  <title>App6---HTML5-Canvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="w3.css">
+  <link rel="stylesheet" href="w3-colors-flat.css">
 
+  <script>
+    // This stores the date and time the file was last modified
+    var docMod = document.lastModified;
+    alert("This file last modified " + docMod);
+    console.log("This file last modified " + docMod);
 
-<script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-</script>
+    // This function draws a blue rectangle on the canvas
+    function drawRectangle() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.fillStyle = "blue";
+      ctx.fillRect(40, 40, 150, 100);
+    }
 
+    // This function writes my name on the canvas
+    function writeName() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "24px Arial";
+      ctx.fillStyle = "red";
+      ctx.fillText("Nilou Chafi", 70, 200);
+    }
 
+    // This function loads an image onto the canvas
+    function loadImage() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var img = new Image();
 
-<style>	
-.body {
-     margin: 0em;
-}
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-	  canvas {
-		  border: 2px solid black;
-		  background-color: white;
-		  width: 400px;
-		  height: 300px;
-		  margin-top: 20px;
-}
-	  button {
-		  width: 90%;
-		  max-width: 400px;
-		  margin: 8px auto;
-		  display: block;
-	  }
-</style>
+      img.onload = function() {
+        ctx.drawImage(img, 210, 40, 100, 100);
+      };
+
+      // Direct image link
+      img.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Example.svg/512px-Example.svg.png";
+    }
+
+    // This function clears everything from the canvas
+    function clearCanvas() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.clearRect(0, 0, c.width, c.height);
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #content {
+      padding: 20px;
+    }
+
+    /* Canvas sized to fit nicely on a phone screen */
+    canvas {
+      border: 2px solid black;
+      background-color: white;
+      width: 90vw;
+      max-width: 350px;
+      height: 250px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* Buttons under the canvas */
+    button {
+      width: 90%;
+      max-width: 350px;
+      margin: 8px auto;
+      display: block;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
-<script>
-	//This stores the date and time the file was last modified
-	var docMod= document.lastModified;
-	alert("This file last modified" + docMod);
-	console.log("This file last modified" + docMod);
-
-	//Draw rectangle on canvas
-	function drawRectangle(){
-		//Find the canvas by its ID
-		var c=document.getElementById("myCanvas");
-		//Get the 2D drawing area of the canvas
-		var ctx=c.getContext("2d');
-		//Set the fill color of the rectangle					 
-		ctx.fillStyle="blue";
-		//fillRect(x position, y position, width, height)
-		ctx.fillRect(%0,50,150,100);
-	}
-
-	//Write name on canvas
-	function writeName() {
-		   var c = document.getElementById("myCanvas");
-   var ctx = c.getContext("2d");
-   ctx.font = "24px Arial";
-   ctx.fillStyle = "red";
-   ctx.fillText("Nilou Chafi", 90, 220);
-	}
-
-	//Draw image on canvas
-	function loadImage() {
-   var c = document.getElementById("myCanvas");
-   var ctx = c.getContext("2d");
-   var img = new Image();
-
-   img.onload = function() {
-      ctx.drawImage(img, 220, 40, 120, 120);
-   };
-img.src = https://www.austinmonthly.com/alldays-pickle-pizza-is-the-most-crave-worthy-slice-in-town/
-	}
-</script>
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
-</div>
-	
-<div id="content" class="w3-container">
-	<p><script>
-	//This stores the date and time the file was last modified
-	var docMod= document.lastModified;
-	alert("This file last modified" + docMod);
-	console.log("This file last modified" + docMod);
+  <div id="header" class="w3-container w3-flat-carrot">
+    <h1>App6---HTML5-Canvas</h1>
+  </div>
 
-	//Draw rectangle on canvas
-	function drawRectangle(){
-		//Find the canvas by its ID
-		var c=document.getElementById("myCanvas");
-		//Get the 2D drawing area of the canvas
-		var ctx=c.getContext("2d');
-		//Set the fill color of the rectangle					 
-		ctx.fillStyle="blue";
-		//fillRect(x position, y position, width, height)
-		ctx.fillRect(%0,50,150,100);
-	}
+  <div id="content" class="w3-container">
+    <p>
+      The following code has been developed by students and/or researchers of the
+      Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.
+      This code is shared for demonstration purposes and should not be considered a product.
+    </p>
 
-	//Write name on canvas
-	function writeName() {
-		   var c = document.getElementById("myCanvas");
-   var ctx = c.getContext("2d");
-   ctx.font = "24px Arial";
-   ctx.fillStyle = "red";
-   ctx.fillText("Nilou Chafi", 90, 220);
-	}
+    <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-	//Draw image on canvas
-	function loadImage() {
-   var c = document.getElementById("myCanvas");
-   var ctx = c.getContext("2d");
-   var img = new Image();
+    <!-- HTML5 canvas with border -->
+    <canvas id="myCanvas" width="350" height="250"></canvas>
 
-   img.onload = function() {
-      ctx.drawImage(img, 220, 40, 120, 120);
-   };
-img.src = https://www.austinmonthly.com/alldays-pickle-pizza-is-the-most-crave-worthy-slice-in-town/
-	}
-</script></p>
-		
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+    <!-- Four required buttons -->
+    <button onclick="drawRectangle()">Draw Rectangle</button>
+    <button onclick="writeName()">Write My Name</button>
+    <button onclick="loadImage()">Load Image</button>
+    <button onclick="clearCanvas()">Clear Canvas</button>
+  </div>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
-</footer>
-
+  <footer class="w3-container w3-flat-carrot">
+    <p>DIY!</p>
+  </footer>
 </body>
 </html>
