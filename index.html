@@ -120,7 +120,45 @@ img.src = https://www.austinmonthly.com/alldays-pickle-pizza-is-the-most-crave-w
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p><script>
+	//This stores the date and time the file was last modified
+	var docMod= document.lastModified;
+	alert("This file last modified" + docMod);
+	console.log("This file last modified" + docMod);
+
+	//Draw rectangle on canvas
+	function drawRectangle(){
+		//Find the canvas by its ID
+		var c=document.getElementById("myCanvas");
+		//Get the 2D drawing area of the canvas
+		var ctx=c.getContext("2d');
+		//Set the fill color of the rectangle					 
+		ctx.fillStyle="blue";
+		//fillRect(x position, y position, width, height)
+		ctx.fillRect(%0,50,150,100);
+	}
+
+	//Write name on canvas
+	function writeName() {
+		   var c = document.getElementById("myCanvas");
+   var ctx = c.getContext("2d");
+   ctx.font = "24px Arial";
+   ctx.fillStyle = "red";
+   ctx.fillText("Nilou Chafi", 90, 220);
+	}
+
+	//Draw image on canvas
+	function loadImage() {
+   var c = document.getElementById("myCanvas");
+   var ctx = c.getContext("2d");
+   var img = new Image();
+
+   img.onload = function() {
+      ctx.drawImage(img, 220, 40, 120, 120);
+   };
+img.src = https://www.austinmonthly.com/alldays-pickle-pizza-is-the-most-crave-worthy-slice-in-town/
+	}
+</script></p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
